@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Job } from '../job';
 import { JobsService } from '../service/jobs.service';
 
@@ -9,7 +10,7 @@ import { JobsService } from '../service/jobs.service';
 })
 export class JobListComponent implements OnInit {
   jobs: Job[] = [];
-  constructor(private jobservice: JobsService) {}
+  constructor(private jobservice: JobsService,private router:Router) {}
   ngOnInit() {
     this.getJobs();
     
@@ -19,5 +20,14 @@ export class JobListComponent implements OnInit {
       this.jobs=data;
     })
     
+  }
+
+  updatejob(id:number){
+    this.router.navigate(["/updatejob",id])
+
+  }
+
+  addjobs(){
+    this.router.navigate(["/createjob"]);
   }
 }

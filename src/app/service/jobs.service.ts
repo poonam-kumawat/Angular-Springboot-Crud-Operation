@@ -21,4 +21,8 @@ export class JobsService {
 
 
   }
+  getJobById(id:number):Observable<Job>{
+    return this.httpClient.get<Job>(`http://localhost:8081/jobs/${id}`);
+
+  }
 }
