@@ -1,1 +1,35 @@
-<p>createjob works!</p>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="ISO-8859-1">
+    <title>Job Details</title>
+   
+</head>
+
+<body>
+
+<div class="container ">
+    <h1>Job Details</h1>
+    <hr>
+    <form action="#" (ngSubmit)="onSubmit()" method="POST">
+        <div class="form-group">
+            <label>Name</label>
+
+        <input type="text" id="name"[(ngModel)]="job.name" name="name" placeholder="Employee Name"class="form-control mb-4 col-4"  >
+        <input type="text"  id="postion"[(ngModel)]="job.position" name="position"placeholder="Postion" class="form-control mb-4 col-4">
+        <input type="number" id="status"[(ngModel)]="job.status" name="status"placeholder="Status" class="form-control mb-4 col-4">
+        <input type="date" id="createdby"[(ngModel)]="job.createdby" name="createdby" placeholder="Status" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-dark col-2">Save Job
+        </button>
+        </div>
+    </form>
+    <hr>
+   
+</div>
+</body>
+</html>
