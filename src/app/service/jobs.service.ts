@@ -15,4 +15,10 @@ export class JobsService {
     return this.httpClient.get<Job[]>(`${this.baseURL}`);
 
   }
+
+  createjob(job:Job):Observable<any>{
+    return this.httpClient.post("http://localhost:8081/jobs",job);
+
+
+  }
 }

@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobListComponent } from './job-list/job-list.component';
 import { CreatejobComponent } from './createjob/createjob.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { UpdatejobComponent } from './updatejob/updatejob.component'
 @NgModule({
   declarations: [
     AppComponent,
     JobListComponent,
-    CreatejobComponent
+    CreatejobComponent,
+    UpdatejobComponent
   ],
   imports: [
     BrowserModule,
