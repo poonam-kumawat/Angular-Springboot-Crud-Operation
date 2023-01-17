@@ -1,3 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url(https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css);
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: bisque;
+    text-align: center;
+    color: black;
+}
