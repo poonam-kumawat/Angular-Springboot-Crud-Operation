@@ -43,6 +43,8 @@
     <td>{{job.createdby}}</td>
     <td> <button (click)="updatejob(job.id)" class="btn btn-success">Update</button>
 
+        <button (click)="deletejob(job.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+
 
     </td>
 
@@ -52,6 +54,7 @@
 
 </table>
 <button class="btn btn-success btn-sm mb-3" (click)="addjobs()" routerLink="createjob">Add Job</button>
+
     
 
 </div>

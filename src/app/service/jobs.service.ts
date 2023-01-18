@@ -25,4 +25,12 @@ export class JobsService {
     return this.httpClient.get<Job>(`http://localhost:8081/jobs/${id}`);
 
   }
+
+  updateJob(id:number,job:Job):Observable<Object>{
+    return this.httpClient.put(`http://localhost:8081/updatejobs/${id}`, job);
+  }
+
+  deletejob(id:number):Observable<Object>{
+    return this.httpClient.delete(`http://localhost:8081/deletejob/${id}`);
+  }
 }

@@ -12,11 +12,12 @@ export class UpdatejobComponent  implements OnInit{
   job:Job=new Job();
   id!: number;
   constructor(private jobService:JobsService,
-    private router:ActivatedRoute){
+    private route:ActivatedRoute,
+    private router:Router){
 
   }
   ngOnInit():void{
-    this.id=this.router.snapshot.params['id'];
+    this.id=this.route.snapshot.params['id'];
     this.jobService.getJobById(this.id).subscribe(data=>{
       this.job=data;
 
@@ -24,8 +25,16 @@ export class UpdatejobComponent  implements OnInit{
     )
 
   }
+  
 
   onSubmit(){
+    this.jobService.updateJob(this.id,this.job).subscribe(data=>{
+      this.goToJobList();
+    },error=>console.error(error))
+
+  }
+  goToJobList(){
+    this.router.navigate(['/jobs']);
 
   }
 
